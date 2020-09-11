@@ -17,7 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/qrastreo" />
+        app:srcCompat="@drawable/qrastreo"
+        android:onClick="onClick1"/>
 
     <ImageButton
         android:id="@+id/qrescato"
@@ -29,6 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qrastreo"
-        app:srcCompat="@drawable/qrescato" />
+        app:srcCompat="@drawable/qrescato"
+        android:onClick="onClick2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

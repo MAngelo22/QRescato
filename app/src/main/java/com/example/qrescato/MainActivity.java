@@ -18,30 +18,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().hide();
+
     Qr1 = findViewById(R.layout.splash_qrastreo);
     QR2 = findViewById(R.layout.splash_qrastreo);
 
-        //  Accion del boton, para cambiar la activity
+        /*  Accion del boton, para cambiar la activity */
 
-    Qr1.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick(View v) {
 
-            Intent cambioSp1 = new Intent(MainActivity.this, SplashQRastreo.class);
-            startActivity(cambioSp1);
-        }
-    });
+    }
 
-        //  Accion del boton, para cambiar la activity
+    public void onClick1(View view) {
 
-    QR2.setOnClickListener(new View.OnClickListener(){
-         @Override
-         public void onClick(View v) {
+        Intent cambioSp1 = new Intent(MainActivity.this, SplashQRastreo.class);
+        startActivity(cambioSp1);
+    }
 
-             Intent cambioSp2 = new Intent(MainActivity.this, SplashQRescato.class);
-             startActivity(cambioSp2);
-         }
-    });
+    //  Accion del boton, para cambiar la activity
 
+    public void onClick2(View view) {
+
+        Intent cambioSp2 = new Intent(MainActivity.this, SplashQRescato.class);
+        startActivity(cambioSp2);
     }
 }
