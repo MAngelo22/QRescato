@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    Qr1 = (Button)findViewById(R.layout.splash_qrastreo);
-    QR2 = (Button)findViewById(R.layout.splash_qrastreo);
+    Qr1 = findViewById(R.layout.splash_qrastreo);
+    QR2 = findViewById(R.layout.splash_qrastreo);
 
         //  Accion del boton, para cambiar la activity
-        
+
     Qr1.setOnClickListener(new View.OnClickListener(){
         @Override
         public void onClick(View v) {
