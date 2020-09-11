@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
-            Intent siguiente = new Intent(MainActivity.this, SplashQRastreo.class);
-            startActivity(siguiente);
+            Intent cambioSp1 = new Intent(MainActivity.this, SplashQRastreo.class);
+            startActivity(cambioSp1);
         }
     });
 
@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
          @Override
          public void onClick(View v) {
 
-             Intent siguiente = new Intent(MainActivity.this, SplashQRescato.class);
-             startActivity(siguiente);
+             Intent cambioSp2 = new Intent(MainActivity.this, SplashQRescato.class);
+             startActivity(cambioSp2);
          }
     });
 
