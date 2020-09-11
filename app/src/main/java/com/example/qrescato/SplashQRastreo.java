@@ -1,5 +1,6 @@
 package com.example.qrescato;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.Animation;
@@ -7,6 +8,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
+@SuppressLint("Registered")
 public class SplashQRastreo extends AppCompatActivity implements Animation.AnimationListener{
 
     @Override
@@ -14,11 +16,11 @@ public class SplashQRastreo extends AppCompatActivity implements Animation.Anima
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_qrastreo);
 
-        ImageView planeta = (ImageView) findViewById(R.id.imgtierragif);
-        ImageView huellas = (ImageView) findViewById(R.id.gifcarga);
-        ImageView Q = (ImageView) findViewById(R.id.q);
-        ImageView rr = (ImageView) findViewById(R.id.r);
-        ImageView astreo = (ImageView) findViewById(R.id.astreo);
+        ImageView planeta = findViewById(R.id.imgtierragif);
+        ImageView huellas = findViewById(R.id.gifcarga);
+        ImageView Q = findViewById(R.id.q);
+        ImageView rr = findViewById(R.id.r);
+        ImageView astreo = findViewById(R.id.astreo);
 
         Animation animation1Desvancer = AnimationUtils.loadAnimation(this,R.anim.animdesvanecer);
         Q.startAnimation(animation1Desvancer);
