@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
         //getSupportActionBar().hide();
 
-    Qr1 = findViewById(R.layout.splash_qrastreo); 
+    Qr1 = findViewById(R.layout.splash_qrastreo);
     QR2 = findViewById(R.layout.splash_qrastreo);
 
-        /*  Accion del boton, para cambiar la activity */
+    /*  Accion del boton, para cambiar la activity */
 
 
     }
