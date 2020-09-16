@@ -15,11 +15,11 @@ public class SplashQRescato extends AppCompatActivity implements Animation.Anima
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_qrescato);
 
-        ImageView planeta = (ImageView) findViewById(R.id.imgtierragif);
-        ImageView huellas = (ImageView) findViewById(R.id.gifcarga);
-        ImageView Q = (ImageView) findViewById(R.id.q);
-        ImageView rr = (ImageView) findViewById(R.id.r);
-        ImageView astreo = (ImageView) findViewById(R.id.astreo);
+        ImageView planeta = findViewById(R.id.imgtierragif);
+        ImageView huellas = findViewById(R.id.gifcarga);
+        ImageView Q = findViewById(R.id.q);
+        ImageView rr = findViewById(R.id.r);
+        ImageView astreo = findViewById(R.id.astreo);
 
         Animation animation1Desvancer = AnimationUtils.loadAnimation(this,R.anim.animdesvanecer);
         Q.startAnimation(animation1Desvancer);
@@ -46,9 +46,9 @@ public class SplashQRescato extends AppCompatActivity implements Animation.Anima
 
     @Override
     public void onAnimationEnd(Animation animation) {
-        Intent transicion = new Intent(this, MenuRastreo.class);
-        //startActivity(transicion);
-        //finish();
+        Intent transicion = new Intent(this, MenuRescato.class);
+        startActivity(transicion);
+        finish();
     }
 
     @Override
