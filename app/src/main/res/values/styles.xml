@@ -12,4 +12,5 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:fontFamily">@font/lazy_dog</item>
     </style>
+
 </resources>

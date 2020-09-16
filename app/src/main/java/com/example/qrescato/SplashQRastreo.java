@@ -47,7 +47,7 @@ public class SplashQRastreo extends AppCompatActivity implements Animation.Anima
 
     @Override
     public void onAnimationEnd(Animation animation) {
-        Intent transicion = new Intent(this,Menu1.class);
+        Intent transicion = new Intent(this, MenuRastreo.class);
         //startActivity(transicion);
         //finish();
     }
