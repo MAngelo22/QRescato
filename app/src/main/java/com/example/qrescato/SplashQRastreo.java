@@ -37,6 +37,7 @@ public class SplashQRastreo extends AppCompatActivity implements Animation.Anima
         Animation animationAstreo = AnimationUtils.loadAnimation(this,R.anim.animalpha);
         astreo.startAnimation(animationAstreo);
 
+        animationR.setAnimationListener(this);
 
     }
 
@@ -48,7 +49,7 @@ public class SplashQRastreo extends AppCompatActivity implements Animation.Anima
     @Override
     public void onAnimationEnd(Animation animation) {
         Intent transicion = new Intent(this, MenuRastreo.class);
-        //startActivity(transicion);
+        startActivity(transicion);
         //finish();
     }
 

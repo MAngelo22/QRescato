@@ -36,6 +36,7 @@ public class SplashQRescato extends AppCompatActivity implements Animation.Anima
         Animation animationAstreo = AnimationUtils.loadAnimation(this,R.anim.animalpha);
         astreo.startAnimation(animationAstreo);
 
+        animationR.setAnimationListener(this);
 
     }
 
@@ -48,7 +49,7 @@ public class SplashQRescato extends AppCompatActivity implements Animation.Anima
     public void onAnimationEnd(Animation animation) {
         Intent transicion = new Intent(this, MenuRescato.class);
         startActivity(transicion);
-        finish();
+       //finish();
     }
 
     @Override
