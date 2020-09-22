@@ -22,6 +22,7 @@
 
     <Button
         android:id="@+id/buttonvis"
+        android:onClick="Visita"
         android:background="@color/colorPrimaryDark"
         style="@style/etiquetas"
         android:textSize="30dp"
@@ -35,6 +36,7 @@
 
     <Button
         android:id="@+id/buttoncrear"
+        android:onClick="User"
         style="@style/etiquetas"
         android:background="@color/colorPrimaryDark"
         android:textSize="25dp"
