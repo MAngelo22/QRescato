@@ -13,7 +13,7 @@
         android:layout_height="398dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="155dp"
         android:layout_marginEnd="8dp"
         android:src="@drawable/lupaymapa2"
@@ -31,7 +31,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="101dp"
         android:layout_marginEnd="70dp"
-        app:srcCompat="@drawable/q" />
+        app:srcCompat="@drawable/q"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/r"
@@ -45,7 +46,8 @@
         android:layout_marginTop="339dp"
         android:layout_marginEnd="216dp"
         android:layout_marginBottom="-122dp"
-        app:srcCompat="@drawable/r" />
+        app:srcCompat="@drawable/r"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/astreo"
@@ -55,7 +57,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="521dp"
         android:layout_marginEnd="17dp"
-        app:srcCompat="@drawable/escato" />
+        app:srcCompat="@drawable/escato"
+        android:contentDescription="@string/todo" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifcarga"
@@ -63,7 +66,7 @@
         android:layout_height="398dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="-110dp"
         android:layout_marginEnd="-7dp"
         android:src="@drawable/huellas"

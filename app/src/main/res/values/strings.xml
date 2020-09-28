@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">QRescato</string>
+    <string name="dale_al_boton">Dale al boton</string>
+    <string name="escanear">Escanear</string>
+    <string name="iniciar_sesion">Iniciar sesion</string>
+    <string name="visitante">Visitante</string>
+    <string name="crear_usuario">Crear usuario</string>
+    <string name="olvide_contrasena">Olvide Contrasena</string>
+    <string name="qrescato">QRescato</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="boton">Boton</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="qrastreo">QRastreo</string>
+    <string name="olvide_contrasena">Olvide Contrasena</string>
+    <string name="crear_usuario">Crear usuario</string>
+    <string name="visitante">Visitante</string>
+    <string name="iniciar_sesion">Iniciar sesion</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
 </resources>
