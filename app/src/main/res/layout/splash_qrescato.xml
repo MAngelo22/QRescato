@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
@@ -9,71 +10,75 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/imgtierragif"
-        android:layout_width="397dp"
-        android:layout_height="398dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
+        android:layout_width="381dp"
+        android:layout_height="393dp"
         android:layout_marginTop="155dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/lupaymapa2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.357"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/q"
         android:layout_width="334dp"
         android:layout_height="406dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginTop="101dp"
-        android:layout_marginEnd="70dp"
-        app:srcCompat="@drawable/q"
-        android:contentDescription="@string/todo" />
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062"
+        app:srcCompat="@drawable/q" />
 
     <ImageView
         android:id="@+id/r"
-        android:layout_width="219dp"
-        android:layout_height="513dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_width="176dp"
+        android:layout_height="250dp"
         android:layout_marginStart="-24dp"
         android:layout_marginTop="339dp"
         android:layout_marginEnd="216dp"
         android:layout_marginBottom="-122dp"
-        app:srcCompat="@drawable/r"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.864"
+        app:srcCompat="@drawable/r" />
 
     <ImageView
         android:id="@+id/astreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="521dp"
-        android:layout_marginEnd="17dp"
-        app:srcCompat="@drawable/escato"
-        android:contentDescription="@string/todo" />
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintStart_toEndOf="@+id/r"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.893"
+        app:srcCompat="@drawable/escato" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifcarga"
-        android:layout_width="397dp"
-        android:layout_height="398dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="-110dp"
-        android:layout_marginEnd="-7dp"
+        android:layout_width="390dp"
+        android:layout_height="134dp"
         android:src="@drawable/huellas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.357"
+        app:layout_constraintVertical_bias="0.026"
         tools:ignore="MissingConstraints" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
