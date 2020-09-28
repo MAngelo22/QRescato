@@ -41,14 +41,14 @@ public class SplashQRescato extends AppCompatActivity implements Animation.Anima
     }
 
     @Override
-    public void onAnimationStart(Animation animation) {
+    public void onAnimationStart(Animation animation2) {
 
     }
 
     @Override
-    public void onAnimationEnd(Animation animation) {
-        Intent transicion = new Intent(this, MenuRescato.class);
-        startActivity(transicion);
+    public void onAnimationEnd(Animation animation2) {
+        Intent transicion1 = new Intent(this, MenuRescato.class);
+        startActivity(transicion1);
        //finish();
     }
 

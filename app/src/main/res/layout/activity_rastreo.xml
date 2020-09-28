@@ -36,7 +36,6 @@
 
     <Button
         android:id="@+id/buttoncrear"
-        android:onClick="User"
         style="@style/etiquetas"
         android:background="@color/colorPrimaryDark"
         android:textSize="25dp"
