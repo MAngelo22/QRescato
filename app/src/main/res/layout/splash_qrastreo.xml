@@ -5,22 +5,20 @@
     android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/fondo2"
     tools:context=".SplashQRastreo">
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/imgtierragif"
-        android:layout_width="397dp"
-        android:layout_height="398dp"
-        android:layout_marginTop="155dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="348dp"
+        android:layout_height="435dp"
         android:src="@drawable/lupaymapa2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.134"
+        app:layout_constraintVertical_bias="0.533"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -41,7 +39,6 @@
         android:id="@+id/r"
         android:layout_width="206dp"
         android:layout_height="267dp"
-        android:layout_marginStart="-24dp"
         android:layout_marginTop="339dp"
         android:layout_marginEnd="216dp"
         android:contentDescription="@string/todo"
@@ -50,7 +47,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.91"
         app:srcCompat="@drawable/r" />
 
     <ImageView
@@ -60,22 +57,23 @@
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/r"
+        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintStart_toStartOf="@+id/r"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939"
+        app:layout_constraintVertical_bias="0.901"
         app:srcCompat="@drawable/astreo" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifcarga"
         android:layout_width="391dp"
         android:layout_height="163dp"
-        android:layout_marginEnd="16dp"
         android:src="@drawable/huellas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.054"
+        app:layout_constraintVertical_bias="0.025"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

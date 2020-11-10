@@ -4,35 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/fondo"
     tools:context=".MainActivity">
 
     <ImageButton
         android:id="@+id/qrastreo"
         style="@style/etiquetas"
-        android:background="@color/colorPrimaryDark"
-        android:layout_width="387dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="389dp"
+        android:layout_height="169dp"
+        android:background="#00A7D3B0"
+        android:contentDescription="@string/todo"
+        android:onClick="onClick1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/qrastreo"
-        android:onClick="onClick1"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/qrastreo2" />
 
     <ImageButton
         android:id="@+id/qrescato"
         style="@style/etiquetas"
-        android:background="@color/colorPrimaryDark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#00A7D3B0"
+        android:contentDescription="@string/boton"
+        android:onClick="onClick2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qrastreo"
-        app:srcCompat="@drawable/qrescato"
-        android:onClick="onClick2"
-        android:contentDescription="@string/boton" />
+        app:layout_constraintVertical_bias="0.937"
+        app:srcCompat="@drawable/qrescato2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

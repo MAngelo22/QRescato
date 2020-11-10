@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuRescato"
-    android:background="@color/colorPrimary">
+    android:background="@drawable/fondo2">
 
     <Button
         android:id="@+id/buttonini"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/btnoscuro"
         style="@style/etiquetas"
         android:textSize="30sp"
         android:layout_width="225dp"
@@ -22,13 +22,14 @@
 
     <Button
         android:id="@+id/buttonvis"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/btnoscuro"
         style="@style/etiquetas"
         android:textSize="30sp"
         android:layout_width="225dp"
         android:layout_height="100dp"
         android:layout_marginTop="176dp"
         android:layout_marginEnd="92dp"
+        android:onClick="mapa"
         android:text="@string/visitante"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonini" />
@@ -36,7 +37,7 @@
     <Button
         android:id="@+id/buttoncrear"
         style="@style/etiquetas"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/btnoscuro"
         android:textSize="25sp"
         android:layout_width="143dp"
         android:layout_height="68dp"
@@ -54,7 +55,7 @@
         android:layout_height="64dp"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="84dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/btnoscuro"
         android:text="@string/olvide_contrasena"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.762"

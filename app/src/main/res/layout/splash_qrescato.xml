@@ -5,22 +5,20 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/fondo2"
     tools:context=".SplashQRastreo">
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/imgtierragif"
-        android:layout_width="381dp"
-        android:layout_height="393dp"
-        android:layout_marginTop="155dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="348dp"
+        android:layout_height="435dp"
         android:src="@drawable/lupaymapa2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.533"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -28,57 +26,54 @@
         android:layout_width="334dp"
         android:layout_height="406dp"
         android:layout_marginTop="101dp"
-        android:layout_marginEnd="16dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintHorizontal_bias="0.207"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062"
+        app:layout_constraintVertical_bias="0.151"
         app:srcCompat="@drawable/q" />
 
     <ImageView
         android:id="@+id/r"
-        android:layout_width="176dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="-24dp"
+        android:layout_width="206dp"
+        android:layout_height="267dp"
         android:layout_marginTop="339dp"
         android:layout_marginEnd="216dp"
-        android:layout_marginBottom="-122dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864"
+        app:layout_constraintVertical_bias="0.91"
         app:srcCompat="@drawable/r" />
 
     <ImageView
         android:id="@+id/astreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
-        app:layout_constraintStart_toEndOf="@+id/r"
+        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintStart_toStartOf="@+id/r"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893"
+        app:layout_constraintVertical_bias="0.901"
         app:srcCompat="@drawable/escato" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifcarga"
-        android:layout_width="390dp"
-        android:layout_height="134dp"
+        android:layout_width="391dp"
+        android:layout_height="163dp"
         android:src="@drawable/huellas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026"
+        app:layout_constraintVertical_bias="0.025"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
