@@ -88,7 +88,7 @@ public class MapsActivity extends AppCompatActivity{
                             */
 
 
-                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,20));
+                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,100));
                             googleMap.addMarker(options);
                             //METODO REST PARA ALMACENAR UNOS DATOS QUE SERAN
                             // latitud = location.getLatitude() y longitud = location.getLongitude()

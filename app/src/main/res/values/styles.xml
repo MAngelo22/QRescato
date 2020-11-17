@@ -13,4 +13,9 @@
         <item name="android:fontFamily">@font/lazy_dog</item>
     </style>
 
+    <style name="etiquetas2">
+        <item name="android:textColor">@color/colorAccentDark</item>
+        <item name="android:fontFamily">@font/lazy_dog</item>
+    </style>
+
 </resources>
