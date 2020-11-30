@@ -8,6 +8,21 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/beta"
+        android:layout_width="282dp"
+        android:layout_height="21dp"
+        android:textAlignment="textEnd"
+        style="@style/etiquetas2"
+        android:textSize="15sp"
+        android:text="BETA V.1.02.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <TextView
         android:id="@+id/texto"
         style="@style/etiquetas"
         android:textColor="@color/colorPrimaryDark"

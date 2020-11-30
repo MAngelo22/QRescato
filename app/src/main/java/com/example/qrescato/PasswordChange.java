@@ -8,20 +8,18 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.qrescato.UsersTable.UserAppDbHelper;
 import com.example.qrescato.UsersTable.UsersAppContract;
-import com.example.qrescato.ZonaSeguraTable.ZonaSeguraContract;
 import com.google.android.material.textfield.TextInputEditText;
 
-public class Login extends AppCompatActivity implements Animation.AnimationListener {
+public class PasswordChange extends AppCompatActivity implements Animation.AnimationListener  {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_password);
 
         final TextView textName = (TextView) findViewById(R.id.textName);
         final TextView textPassword = (TextView) findViewById(R.id.textPas);
@@ -98,56 +96,6 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
         db2.close();
     }
 
-    public void rellenarZonasSeguras(View view) {
-        //Vacia las cajas de texto
-        TextInputEditText Nombre = null;
-
-        UserAppDbHelper mHelper = new UserAppDbHelper(this);
-
-        SQLiteDatabase db2 = mHelper.getReadableDatabase();
-        String[] args = new String[]{Nombre.getText().toString()};
-        Cursor cursor = db2.query(ZonaSeguraContract.TaskEntry.TABLE,// EN ESTA TABLA
-                new String[]{
-                        ZonaSeguraContract.TaskEntry.NOMBRE,// BUSCAME ESTOS CAMPOS/COLUMNAS
-                        ZonaSeguraContract.TaskEntry.CORREO,
-                        ZonaSeguraContract.TaskEntry.TLFN,
-                        ZonaSeguraContract.TaskEntry.LONGITUD,
-                        ZonaSeguraContract.TaskEntry.LATITUD,
-
-                },
-                "username=?", //DONDE username SEA IGUAL A
-                args,// EL STRING QUE HEMOS METIDO ARRIBA EN args
-                null, // NO PONGO GROUP
-                null, null); // NO PONGO ORDER BY
-
-        // SELECT USERNAME, PASSWORD WHERE USERNAME = "PEPE"
-
-        // El metodo moveToNext() entra en funcionamiento cada vez que tu consulta o query, devuelve un resultado
-        // Cuando un usuario no esta en la base de datos, no va a hacer nada, ya que la logica de dentro solo actuara
-        // Cuando se devuelva algo de tu select
-
-        if (cursor.getCount() == 0) {
-            Toast toastUsu = Toast.makeText(this, "Comprueba nombre", Toast.LENGTH_LONG);
-            toastUsu.show();
-        }
-        while (cursor.moveToNext()) {
-
-            String NombreEnComun = cursor.getString(
-                    (Integer) cursor.getColumnIndex(ZonaSeguraContract.TaskEntry.NOMBRE)
-            );
-
-            if (Nombre.getText().toString().equals(NombreEnComun)) {
-                Intent intent = new Intent(this, MapsActivity.class);
-                startActivity(intent);
-            } else {
-                Toast toastUsu = Toast.makeText(this, "Comprueba nombre", Toast.LENGTH_LONG);
-                toastUsu.show();
-            }
-        }
-        cursor.close();
-        db2.close();
-    }
-
     @Override
     public void onAnimationStart(Animation animation) {
 
@@ -161,11 +109,5 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
     @Override
     public void onAnimationRepeat(Animation animation) {
 
-    }
-
-    //La funcion de volver al menu anterior
-    public void volver(View view) {
-        Intent cambioUs = new Intent(this, MenuRescato.class);
-        startActivity(cambioUs);
     }
 }

@@ -53,6 +53,10 @@
         <activity android:name=".MenuRastreo" />
         <activity android:name=".MenuRescato" />
         <activity android:name=".CamaraQR" />
+        <activity android:name=".LoginNew" />
+        <activity android:name=".Login" />
+        <activity android:name=".PasswordChange" />
+        <activity android:name=".LoginNew2" />
     </application>
 
 </manifest>

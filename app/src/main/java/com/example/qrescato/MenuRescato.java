@@ -23,8 +23,22 @@ public class MenuRescato extends AppCompatActivity {
 
     }
 
-    public void mapa (View view) {
+    public void Log(View view) {
+        Intent cambioUs = new Intent(this, Login.class);
+        startActivity(cambioUs);
+    }
 
+    public void crearUsuario(View view) {
+        Intent cambioUs = new Intent(this, LoginNew.class);
+        startActivity(cambioUs);
+    }
+
+    public void PAssChange(View view) {
+        Intent cambioUs = new Intent(this, PasswordChange.class);
+        startActivity(cambioUs);
+    }
+
+    public void mapa (View view) {
         Intent cambioSp1 = new Intent(MenuRescato.this, MapsActivity.class);
         startActivity(cambioSp1);
     }

@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.qrescato.UsersTable.UserAppDbHelper;
 import com.example.qrescato.UsersTable.UsersAppContract;
 
-public class LoginNew extends AppCompatActivity {
+public class LoginNew2 extends AppCompatActivity {
 
     Button BtnCrear;
     private UserAppDbHelper mHelper;
@@ -61,6 +61,7 @@ public class LoginNew extends AppCompatActivity {
     }
 
 
+
     public void Crear() {
         mHelper = new UserAppDbHelper(this);
         final TextView textoNombre = (TextView) findViewById(R.id.textNewName);
@@ -91,25 +92,17 @@ public class LoginNew extends AppCompatActivity {
         toastNewUsu.setView(view);
         toastNewUsu.show();
 
-        Intent cambioUs = new Intent(this, MenuRescato.class);
-        startActivity(cambioUs);
 
     }
-
-    //Aqui ponemos los campos vacios al doble click
+        //Aqui ponemos los campos vacios al doble click
     public void vaciar(TextView tv){
         tv.setText("");
     }
+
 
     //La funcion de volver al menu anterior
     public void volver(View view) {
         Intent cambioUs = new Intent(this, MenuRescato.class);
         startActivity(cambioUs);
     }
-
-/*
-    public void Fase2Creacion(View view) {
-        Intent cambiofase = new Intent(this, LoginNew2.class);
-        startActivity(cambiofase);
-    }*/
 }

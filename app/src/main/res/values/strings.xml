@@ -5,7 +5,7 @@
     <string name="iniciar_sesion">Iniciar sesion</string>
     <string name="visitante">Visitante</string>
     <string name="crear_usuario">Crear usuario</string>
-    <string name="olvide_contrasena">Olvide Contrasena</string>
+    <string name="olvide_contrasena">Olvide Password</string>
     <string name="qrescato">QRescato</string>
     <string name="boton">Boton</string>
     <string name="qrastreo">QRastreo</string>
@@ -19,7 +19,14 @@
     <string name="hint">hint</string>
     <string name="_123">123</string>
     <string name="usuario">usuario</string>
-    <string name="contrase_a">contraseña</string>
+    <string name="contrase_a">Password</string>
     <string name="volver">Volver</string>
     <string name="atras">Atras</string>
+    <string name="email">e-mail</string>
+    <string name="escribe_aqui">Escribe aqui</string>
+    <string name="telefono_o_correo">telefono o correo</string>
+    <string name="generar_coordenadas">Generar Coordenadas</string>
+    <string name="telefono_correo">telefono/correo</string>
+    <string name="nombre">Nombre</string>
+    <string name="aviso_se_guardara_la_coordenada_de_su_posicion_actual">Aviso, se guardara la coordenada de su posicion actual</string>
 </resources>

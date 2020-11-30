@@ -9,58 +9,67 @@
 
     <Button
         android:id="@+id/buttonini"
-        android:background="@drawable/btnoscuro"
         style="@style/etiquetas"
-        android:textSize="30sp"
         android:layout_width="225dp"
         android:layout_height="100dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="92dp"
+        android:background="@drawable/btnoscuro2"
+        android:onClick="Log"
         android:text="@string/iniciar_sesion"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintVertical_bias="0.072" />
 
     <Button
         android:id="@+id/buttonvis"
-        android:background="@drawable/btnoscuro"
         style="@style/etiquetas"
-        android:textSize="30sp"
         android:layout_width="225dp"
         android:layout_height="100dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/btnoscuro2"
         android:onClick="mapa"
         android:text="@string/visitante"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonini" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonolvide"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttoncrear"
         style="@style/etiquetas"
-        android:background="@drawable/btnoscuro"
-        android:textSize="25sp"
         android:layout_width="143dp"
         android:layout_height="68dp"
-        android:layout_marginStart="140dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/btnoscuro2"
+        android:onClick="crearUsuario"
         android:text="@string/crear_usuario"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonini" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonini"
+        app:layout_constraintVertical_bias="0.023" />
 
     <Button
         android:id="@+id/buttonolvide"
         style="@style/etiquetas"
-        android:textSize="25sp"
         android:layout_width="144dp"
         android:layout_height="64dp"
-        android:layout_marginTop="92dp"
         android:layout_marginEnd="84dp"
-        android:background="@drawable/btnoscuro"
+        android:background="@drawable/btnoscuro2"
+        android:onClick="PAssChange"
         android:text="@string/olvide_contrasena"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.762"
+        app:layout_constraintHorizontal_bias="0.737"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonini" />
+        app:layout_constraintTop_toBottomOf="@+id/buttoncrear"
+        app:layout_constraintVertical_bias="0.097" />
 
     <ImageView
         android:id="@+id/ajustes"
@@ -80,9 +89,26 @@
         android:text="@string/qrescato"
         android:textAlignment="center"
         android:textSize="70sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonini"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.143" />
+
+    <TextView
+        android:id="@+id/beta"
+        android:layout_width="282dp"
+        android:layout_height="21dp"
+        android:textAlignment="textEnd"
+        style="@style/etiquetas2"
+        android:textSize="15sp"
+        android:text="BETA V.1.02.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
