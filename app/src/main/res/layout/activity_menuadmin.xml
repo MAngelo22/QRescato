@@ -23,26 +23,6 @@
         app:layout_constraintVertical_bias="0.977" />
 
     <Button
-        android:id="@+id/BtnMod"
-        style="@style/etiquetas"
-        android:layout_width="324dp"
-        android:layout_height="97dp"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/btnclaro"
-        android:onClick="Update"
-        android:text="@string/modificar"
-        android:textColor="@color/colorAccentDark"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnListar"
-        app:layout_constraintVertical_bias="0.086"
-        tools:ignore="MissingConstraints,OnClick" />
-
-    <Button
         android:id="@+id/BtnListar"
         style="@style/etiquetas"
         android:layout_width="324dp"
@@ -59,7 +39,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BtnCreate"
-        app:layout_constraintVertical_bias="0.071"
+        app:layout_constraintVertical_bias="0.299"
         tools:ignore="MissingConstraints,OnClick" />
 
     <Button
@@ -79,27 +59,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.104"
-        tools:ignore="MissingConstraints,OnClick" />
-
-    <Button
-        android:id="@+id/BtnDel"
-        style="@style/etiquetas"
-        android:layout_width="324dp"
-        android:layout_height="97dp"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/btnclaro"
-        android:onClick="Delete"
-        android:text="@string/eliminar"
-        android:textColor="@color/colorAccentDark"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnMod"
-        app:layout_constraintVertical_bias="0.154"
+        app:layout_constraintVertical_bias="0.249"
         tools:ignore="MissingConstraints,OnClick" />
 
     <Button
@@ -117,8 +77,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnDel"
-        app:layout_constraintVertical_bias="0.833"
+        app:layout_constraintTop_toBottomOf="@+id/BtnListar"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

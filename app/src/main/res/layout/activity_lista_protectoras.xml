@@ -5,79 +5,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:background="@color/colorAccentDark">
+    android:background="@drawable/papel">
 
-
-    <TextView
-        android:id="@+id/protec_telefono"
-        style="@style/etiquetas"
-        android:layout_width="145dp"
-        android:layout_height="38dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_gravity="right"
-        android:text="Listo"
-        android:textSize="35dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toEndOf="@+id/protec_title"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/protec_title"
         style="@style/etiquetas"
-        android:layout_width="145dp"
-        android:layout_height="38dp"
+        android:layout_width="240dp"
+        android:layout_height="37dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="right"
-        android:text="Listo"
+        android:text="@string/listo"
         android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="35dp" />
-
-    <Button
-        android:id="@+id/task_delete"
-        android:layout_width="62dp"
-        android:layout_height="36dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="146dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="548dp"
-        android:background="@color/colorAccent"
-        android:onClick="deleteProtectora"
-        android:text="Borrar"
-        app:layout_constraintBottom_toBottomOf="@+id/protec_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toEndOf="@+id/protec_telefono"
-        app:layout_constraintTop_toTopOf="@+id/protec_title"
-        app:layout_constraintVertical_bias="0.213"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/lapiz"
-        android:layout_width="44dp"
-        android:layout_height="35dp"
+        android:background="@color/colorAccentDark"
+        android:layout_width="40dp"
+        android:layout_height="37dp"
         android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
         android:onClick="cargarFormuModProtec"
-        app:layout_constraintBottom_toBottomOf="@+id/protec_title"
+        app:layout_constraintBottom_toBottomOf="@+id/task_delete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/task_delete"
-        app:layout_constraintTop_toTopOf="@+id/protec_title"
+        app:layout_constraintTop_toTopOf="@+id/task_delete"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints"
         tools:srcCompat="@android:drawable/ic_menu_manage" />
+
+    <ImageView
+        android:id="@+id/task_delete"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:onClick="deleteProtectora"
+        app:layout_constraintBottom_toBottomOf="@+id/protec_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/protec_title"
+        app:layout_constraintTop_toTopOf="@+id/protec_title"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

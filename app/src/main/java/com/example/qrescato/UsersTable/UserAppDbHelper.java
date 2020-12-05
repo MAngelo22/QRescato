@@ -16,12 +16,12 @@ public class UserAppDbHelper extends SQLiteOpenHelper{
 
         @Override
         public void onCreate(SQLiteDatabase db) {
-            String createTable = "CREATE TABLE IF NOT EXISTS " + UsersAppContract.TaskEntry.TABLE + " ( " +
+            String createTable = "CREATE TABLE " + UsersAppContract.TaskEntry.TABLE + " ( " +
                     UsersAppContract.TaskEntry.NOMBRE_USUARIO+ " TEXT NOT NULL PRIMARY KEY, " +
                     UsersAppContract.TaskEntry.PASSWORD_USUARIO + " TEXT NOT NULL, " +
                     UsersAppContract.TaskEntry.CORREO  + " TEXT NOT NULL);";
 
-            String createTableZonaSegura = "CREATE TABLE IF NOT EXISTS " + ZonaSeguraContract.TaskEntry.TABLE + " ( " +
+            String createTableZonaSegura = "CREATE TABLE " + ZonaSeguraContract.TaskEntry.TABLE + " ( " +
                     ZonaSeguraContract.TaskEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     ZonaSeguraContract.TaskEntry.NOMBRE + " TEXT NOT NULL, "+
                     ZonaSeguraContract.TaskEntry.CORREO + " TEXT NOT NULL, "+
@@ -29,7 +29,7 @@ public class UserAppDbHelper extends SQLiteOpenHelper{
                     ZonaSeguraContract.TaskEntry.LATITUD + " FLOAT NOT NULL, "+
                     ZonaSeguraContract.TaskEntry.TLFN + " NUMBER NOT NULL);";
 
-            String createTableVoluntarios ="CREATE TABLE IF NOT EXISTS " + VoluntariosContract.TaskEntry.TABLE + " ( " +
+            String createTableVoluntarios ="CREATE TABLE " + VoluntariosContract.TaskEntry.TABLE + " ( " +
                     VoluntariosContract.TaskEntry.NOMBRE_USUARIO + " TEXT NOT NULL PRIMARY KEY , " +
                     VoluntariosContract.TaskEntry.PASSWORD_USUARIO + " TEXT NOT NULL , " +
                     VoluntariosContract.TaskEntry.CORREO + " TEXT NOT NULL , " +
