@@ -62,8 +62,6 @@
 
         <activity android:name=".MapsPersonalizado" />
 
-        <activity android:name=".PasswordChange" android:screenOrientation="portrait"/>
-
         <activity android:name=".IniCreate" android:screenOrientation="portrait"/>
         <activity android:name=".IniReader" android:screenOrientation="portrait"/>
 

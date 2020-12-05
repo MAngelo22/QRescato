@@ -13,22 +13,25 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.qrescato.UsersTable.UserAppDbHelper;
-import com.example.qrescato.UsersTable.UsersAppContract;
+import com.example.qrescato.VoluntariosTable.VoluntariosContract;
+import com.example.qrescato.VoluntariosTable.VoluntariosDbHelper;
 
 public class CreateFormularioVolun extends AppCompatActivity {
 
     Button BtnCrear;
-    private UserAppDbHelper mHelper;
+    private VoluntariosDbHelper mHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create);
-        BtnCrear = (Button) findViewById(R.id.BtnMod);
+        setContentView(R.layout.activity_create_voluntario);
+        BtnCrear = (Button) findViewById(R.id.BtnCrearVolun);
         final TextView textName = (TextView) findViewById(R.id.nombreProtectoraModificar);
-        final TextView textPassword = (TextView) findViewById(R.id.textNewPas);
-        final TextView textEmail = (TextView) findViewById(R.id.telefonoProtectoraModificar);
+        final TextView textPassword = (TextView) findViewById(R.id.PasswordCambiar);
+        final TextView textTelefono = (TextView) findViewById(R.id.telefonoProtectoraModificar);
+        final TextView textEmail = (TextView) findViewById(R.id.mailProtectoraModificar);
+        final TextView textLat = (TextView) findViewById(R.id.latProtectoraModificar);
+        final TextView textLong = (TextView) findViewById(R.id.longProtectoraModifcar);
 
         //Aqui hago un onclick escuchando a la funcion de vaciar
         textName.setOnClickListener(new View.OnClickListener(){
@@ -43,17 +46,35 @@ public class CreateFormularioVolun extends AppCompatActivity {
                 vaciar(textPassword);
             }
         });
+        textTelefono.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View vista){
+                vaciar(textTelefono);
+            }
+        });
         textEmail.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View vista){
                 vaciar(textEmail);
             }
         });
+        textLong.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View vista){
+                vaciar(textLong);
+            }
+        });
+        textLat.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View vista){
+                vaciar(textLat);
+            }
+        });
 
         BtnCrear.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View vista){
-                Crear();
+                CrearVoluntario();
             }
         });
 
@@ -62,11 +83,14 @@ public class CreateFormularioVolun extends AppCompatActivity {
 
 
 
-    public void Crear() {
-        mHelper = new UserAppDbHelper(this);
-        final TextView textoNombre = (TextView) findViewById(R.id.nombreProtectoraModificar);
-        final TextView textoPassword = (TextView) findViewById(R.id.textNewPas);
-        final TextView textEmail = (TextView) findViewById(R.id.telefonoProtectoraModificar);
+    public void CrearVoluntario() {
+        mHelper = new VoluntariosDbHelper(this);
+        final TextView textName = (TextView) findViewById(R.id.nombreProtectoraModificar);
+        final TextView textPassword = (TextView) findViewById(R.id.PasswordCambiar);
+        final TextView textTelefono = (TextView) findViewById(R.id.telefonoProtectoraModificar);
+        final TextView textEmail = (TextView) findViewById(R.id.mailProtectoraModificar);
+        final TextView textLat = (TextView) findViewById(R.id.latProtectoraModificar);
+        final TextView textLong = (TextView) findViewById(R.id.longProtectoraModifcar);
 
         //Instanciamos la base de datos con mHelper, y la hacemos escribible
         //Creamos un "contenedor" que almacenara los valores que usaremos
@@ -76,11 +100,14 @@ public class CreateFormularioVolun extends AppCompatActivity {
         SQLiteDatabase db = mHelper.getWritableDatabase();
         ContentValues valoresAProcesar = new ContentValues();
 
-        valoresAProcesar.put(UsersAppContract.TaskEntry.NOMBRE_USUARIO ,textoNombre.getText().toString());
-        valoresAProcesar.put(UsersAppContract.TaskEntry.PASSWORD_USUARIO, textoPassword.getText().toString());
-        valoresAProcesar.put(UsersAppContract.TaskEntry.CORREO, textEmail.getText().toString());
+        valoresAProcesar.put(VoluntariosContract.TaskEntry.NOMBRE_USUARIO ,textName.getText().toString());
+        valoresAProcesar.put(VoluntariosContract.TaskEntry.PASSWORD_USUARIO, textPassword.getText().toString());
+        valoresAProcesar.put(VoluntariosContract.TaskEntry.TLFN, textTelefono.getText().toString());
+        valoresAProcesar.put(VoluntariosContract.TaskEntry.CORREO, textEmail.getText().toString());
+        valoresAProcesar.put(VoluntariosContract.TaskEntry.LATITUD, textLat.getText().toString());
+        valoresAProcesar.put(VoluntariosContract.TaskEntry.LONGITUD, textLong.getText().toString());
 
-        db.insert(UsersAppContract.TaskEntry.TABLE, null, valoresAProcesar);
+        db.insert(VoluntariosContract.TaskEntry.TABLE, null, valoresAProcesar);
         db.close();
 
         //Reproducimos el Toast
@@ -94,6 +121,7 @@ public class CreateFormularioVolun extends AppCompatActivity {
 
         Intent cambioUs = new Intent(this, MenuAdmin.class);
         startActivity(cambioUs);
+
     }
         //Aqui ponemos los campos vacios al doble click
     public void vaciar(TextView tv){

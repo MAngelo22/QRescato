@@ -1,46 +1,85 @@
 package com.example.qrescato;
 
+import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.qrescato.UsersTable.UserAppDbHelper;
+import com.example.qrescato.VoluntariosTable.VoluntariosContract;
+import com.example.qrescato.VoluntariosTable.VoluntariosDbHelper;
 
 public class ModificaFormulario extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback{
 
-
-    TextView coorX, coorY;
+    private VoluntariosDbHelper vDbHelper;
+    TextView coorX, coorY, PasswordModificar;
     Button BtnGenerar;
+    private String texto;
 
     private UserAppDbHelper mHelper;
     private LocationManager locManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        vDbHelper = new VoluntariosDbHelper(this);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modificar);
+        PasswordModificar = (TextView) findViewById(R.id.voluntarioPasswordModificar);
         coorX = (TextView) findViewById(R.id.longProtectoraModifcar);
         coorY = (TextView) findViewById(R.id.latProtectoraModificar);
     }
 
-public void Modificar(){
-    LayoutInflater inflater = getLayoutInflater();
-    View view = inflater.inflate(R.layout.toastmodusu, null);
-    Toast toastNewUsu = new Toast (this);
-    toastNewUsu.setDuration(Toast.LENGTH_LONG);
-    toastNewUsu.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.BOTTOM, 0, 0);
-    toastNewUsu.setView(view);
-    toastNewUsu.show();
+public void Modificar(View view) {
+
+    View parent = (View) view.getParent();
+    final TextView nomProtTextView = (TextView) parent.findViewById(R.id.nombreProtectoraModificar);
+    final TextView telProtTextView = (TextView) parent.findViewById(R.id.telefonoProtectoraModificar);
+    final TextView mailProtTextView = (TextView) parent.findViewById(R.id.mailProtectoraModificar);
+    final TextView lattaskTextView = (TextView) parent.findViewById(R.id.latProtectoraModificar);
+    final TextView longTextView = (TextView) parent.findViewById(R.id.longProtectoraModifcar);
+
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+    builder.setTitle("Va a modificar al Voluntario");
+    builder.setMessage("¿Desea hacerlo?");
+    builder.setPositiveButton("Modificar", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            String protectora = String.valueOf(nomProtTextView.getText());
+            String Password = String.valueOf(PasswordModificar.getText());
+            int telefono = Integer.valueOf("" + telProtTextView.getText());
+            String mail = String.valueOf(mailProtTextView.getText());
+            float latitud = Float.valueOf("" + lattaskTextView.getText());
+            float longitud = Float.valueOf("" + longTextView.getText());
+            SQLiteDatabase db = vDbHelper.getWritableDatabase();
+            ContentValues values = new ContentValues();
+            values.put(VoluntariosContract.TaskEntry.NOMBRE_USUARIO, protectora);
+            values.put(VoluntariosContract.TaskEntry.PASSWORD_USUARIO, Password);
+            values.put(VoluntariosContract.TaskEntry.LONGITUD, longitud);
+            values.put(VoluntariosContract.TaskEntry.LATITUD, latitud);
+            values.put(VoluntariosContract.TaskEntry.TLFN, telefono);
+            values.put(VoluntariosContract.TaskEntry.CORREO, mail);
+            db.update(VoluntariosContract.TaskEntry.TABLE,
+                    values,
+                    VoluntariosContract.TaskEntry.NOMBRE_USUARIO + " = ?",
+                    new String[]{texto});
+            db.close();
+
+        }
+    }).setNegativeButton("Cancelar", null);
+    AlertDialog dialog = builder
+            .create();
+    dialog.show();
 }
 
     //La funcion de volver al menu anterior
@@ -48,10 +87,10 @@ public void Modificar(){
         Intent cambioUs = new Intent(this, MenuAdmin.class);
         startActivity(cambioUs);
     }
-    public void Generar(View view) {
+    /*public void Generar(View view) {
 
 
-     /*   //Generar coordenadas
+        //Generar coordenadas
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
@@ -66,6 +105,6 @@ public void Modificar(){
             coorY.setText(String.valueOf(loc.getLatitude()));
             coorX.setText(String.valueOf(loc.getLongitude()));
         }
-     */
-    }
+
+    }*/
 }

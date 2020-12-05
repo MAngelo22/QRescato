@@ -25,7 +25,7 @@ public class LoginNew extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_login);
-        BtnCrear = (Button) findViewById(R.id.BtnMod);
+        BtnCrear = (Button) findViewById(R.id.BtnGenerar);
         final TextView textName = (TextView) findViewById(R.id.nombreProtectoraModificar);
         final TextView textPassword = (TextView) findViewById(R.id.textNewPas);
         final TextView textEmail = (TextView) findViewById(R.id.telefonoProtectoraModificar);

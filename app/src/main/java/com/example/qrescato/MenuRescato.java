@@ -33,11 +33,6 @@ public class MenuRescato extends AppCompatActivity {
         startActivity(cambioUs);
     }
 
-    public void PAssChange(View view) {
-        Intent cambioUs2 = new Intent(this, PasswordChange.class);
-        startActivity(cambioUs2);
-    }
-
     public void mapa (View view) {
         Intent cambioSp1 = new Intent(MenuRescato.this, MapsActivity.class);
         startActivity(cambioSp1);

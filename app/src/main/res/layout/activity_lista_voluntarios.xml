@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/protec_title"
+        android:id="@+id/Vol_title"
         style="@style/etiquetas"
         android:layout_width="240dp"
         android:layout_height="37dp"
@@ -28,12 +28,12 @@
 
     <ImageView
         android:id="@+id/lapizVol"
-        android:background="@color/colorAccentDark"
         android:layout_width="40dp"
         android:layout_height="37dp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="40dp"
-        android:onClick="cargarFormuModProtec"
+        android:background="@color/colorAccentDark"
+        android:onClick="cargarFormuModVolun"
         app:layout_constraintBottom_toBottomOf="@+id/task_delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -47,11 +47,12 @@
         android:id="@+id/task_delete"
         android:layout_width="42dp"
         android:layout_height="37dp"
-        android:onClick="deleteProtectora"
-        app:layout_constraintBottom_toBottomOf="@+id/protec_title"
+        android:layout_marginEnd="76dp"
+        android:onClick="deleteVoluntario"
+        app:layout_constraintBottom_toBottomOf="@+id/Vol_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/protec_title"
+        app:layout_constraintStart_toEndOf="@+id/Vol_title"
         app:layout_constraintTop_toTopOf="@+id/protec_title"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/ic_menu_delete" />

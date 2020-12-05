@@ -20,41 +20,43 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.41"
-        app:layout_constraintStart_toEndOf="@+id/BtnMod"
-        app:layout_constraintTop_toTopOf="@+id/BtnMod"
+        app:layout_constraintStart_toEndOf="@+id/BtnGenerar"
+        app:layout_constraintTop_toTopOf="@+id/BtnGenerar"
         app:layout_constraintVertical_bias="0.015"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/latProtectoraModificar"
         style="@style/etiquetas2"
-        android:layout_width="202dp"
-        android:layout_height="64dp"
+        android:layout_width="179dp"
+        android:layout_height="98dp"
         android:hint="@string/coordenada_y"
         android:text=""
+        android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mailProtectoraModificar"
-        app:layout_constraintVertical_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/longProtectoraModifcar"
+        app:layout_constraintTop_toBottomOf="@+id/usu4"
+        app:layout_constraintVertical_bias="0.004"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/longProtectoraModifcar"
         style="@style/etiquetas2"
-        android:layout_width="202dp"
-        android:layout_height="64dp"
+        android:layout_width="187dp"
+        android:layout_height="99dp"
         android:hint="@string/coordenada_x"
         android:text=""
+        android:textAlignment="center"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/latProtectoraModificar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mailProtectoraModificar"
-        app:layout_constraintVertical_bias="0.171"
+        app:layout_constraintTop_toBottomOf="@+id/usu4"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -190,7 +192,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/BtnMod"
+        android:id="@+id/BtnGenerar"
         style="@style/etiquetas"
         android:layout_width="170dp"
         android:layout_height="70dp"
@@ -221,7 +223,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnMod"
+        app:layout_constraintTop_toBottomOf="@+id/BtnGenerar"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 

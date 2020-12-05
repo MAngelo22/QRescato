@@ -8,20 +8,20 @@
     android:background="@drawable/fondo2">
 
     <Button
-        android:id="@+id/BtnModProtec"
+        android:id="@+id/BtnCrearVolun"
         style="@style/etiquetas"
         android:layout_width="166dp"
         android:layout_height="83dp"
         android:layout_alignParentEnd="true"
         android:background="@drawable/btnoscuro2"
-        android:onClick="Crear"
+        android:onClick="Modificar"
         android:text="@string/modificar_voluntariio"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.259"
-        app:layout_constraintStart_toEndOf="@+id/BtnMod"
-        app:layout_constraintTop_toTopOf="@+id/BtnMod"
+        app:layout_constraintStart_toEndOf="@+id/BtnGenerar"
+        app:layout_constraintTop_toTopOf="@+id/BtnGenerar"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints,OnClick" />
 
@@ -152,10 +152,10 @@
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092"
+        app:layout_constraintVertical_bias="0.008"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -166,6 +166,24 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:text="@string/telefono2"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voluntarioPasswordModificar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/pass"
+        style="@style/etiquetas2"
+        android:layout_width="381dp"
+        android:layout_height="52dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/password_nueva"
         android:textAlignment="center"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -186,19 +204,34 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usu2"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/voluntarioPasswordModificar"
+        style="@style/etiquetas2"
+        android:layout_width="361dp"
+        android:layout_height="54dp"
+        android:hint="@string/escribe_aqui"
+        android:text=""
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
     <Button
-        android:id="@+id/BtnMod"
+        android:id="@+id/BtnGenerar"
         style="@style/etiquetas"
         android:layout_width="166dp"
         android:layout_height="83dp"
         android:layout_alignParentEnd="true"
         android:background="@drawable/btnoscuro2"
-        android:onClick="Generar"
         android:text="@string/generar_coordenadas"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -223,7 +256,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnMod"
+        app:layout_constraintTop_toBottomOf="@+id/BtnGenerar"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 

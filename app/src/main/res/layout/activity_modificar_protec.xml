@@ -8,7 +8,7 @@
     android:background="@drawable/fondo2">
 
     <Button
-        android:id="@+id/BtnModProtec"
+        android:id="@+id/BtnCrearVolun"
         style="@style/etiquetas"
         android:layout_width="166dp"
         android:layout_height="83dp"
@@ -20,8 +20,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.259"
-        app:layout_constraintStart_toEndOf="@+id/BtnMod"
-        app:layout_constraintTop_toTopOf="@+id/BtnMod"
+        app:layout_constraintStart_toEndOf="@+id/BtnGenerar"
+        app:layout_constraintTop_toTopOf="@+id/BtnGenerar"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints,OnClick" />
 
@@ -192,7 +192,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/BtnMod"
+        android:id="@+id/BtnGenerar"
         style="@style/etiquetas"
         android:layout_width="166dp"
         android:layout_height="83dp"
@@ -223,7 +223,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnMod"
+        app:layout_constraintTop_toBottomOf="@+id/BtnGenerar"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
