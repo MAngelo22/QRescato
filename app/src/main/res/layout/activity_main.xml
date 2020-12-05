@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/logo1" />
+        app:srcCompat="@drawable/logo1"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -29,7 +30,8 @@
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/logo2" />
+        app:srcCompat="@drawable/logo2"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/beta"
@@ -38,7 +40,7 @@
         android:textAlignment="textEnd"
         style="@style/etiquetas2"
         android:textSize="15sp"
-        android:text="BETA V.1.02.0"
+        android:text="@string/beta_v_1_02_0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.98"

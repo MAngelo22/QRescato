@@ -66,11 +66,15 @@
         android:id="@+id/ajustes"
         android:layout_width="50dp"
         android:layout_height="52dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571"
         app:srcCompat="@android:drawable/ic_menu_preferences"
-        tools:layout_editor_absoluteX="345dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="@string/todo" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/titulo"

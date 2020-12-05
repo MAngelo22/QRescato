@@ -85,7 +85,7 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
             );
 
             if (password.getText().toString().equals(passwordParaHacerMatch)) {
-                Intent intent = new Intent(this, MapsActivity.class);
+                Intent intent = new Intent(this, MapsPersonalizado.class);
                 startActivity(intent);
             } else {
                 Toast toastUsu = Toast.makeText(this, "Comprueba nombre y contraseña", Toast.LENGTH_LONG);
@@ -98,6 +98,7 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
         db2.close();
     }
 
+    /*
     public void rellenarZonasSeguras(View view) {
         //Vacia las cajas de texto
         TextInputEditText Nombre = null;
@@ -137,7 +138,7 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
             );
 
             if (Nombre.getText().toString().equals(NombreEnComun)) {
-                Intent intent = new Intent(this, MapsActivity.class);
+                Intent intent = new Intent(this, MapsPersonalizado.class);
                 startActivity(intent);
             } else {
                 Toast toastUsu = Toast.makeText(this, "Comprueba nombre", Toast.LENGTH_LONG);
@@ -147,7 +148,7 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
         cursor.close();
         db2.close();
     }
-
+*/
     @Override
     public void onAnimationStart(Animation animation) {
 

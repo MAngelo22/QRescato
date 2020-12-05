@@ -16,6 +16,7 @@
 
     <application
         android:allowBackup="true"
+        android:orientation="vertical"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@drawable/icono"
@@ -41,22 +42,51 @@
 
         <uses-library android:name="com.google.android.maps" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashQRastreo" />
-        <activity android:name=".SplashQRescato" />
-        <activity android:name=".MenuRastreo" />
-        <activity android:name=".MenuRescato" />
-        <activity android:name=".CamaraQR" />
-        <activity android:name=".LoginNew" />
-        <activity android:name=".Login" />
-        <activity android:name=".PasswordChange" />
-        <activity android:name=".LoginNew2" />
+        <activity android:name=".SplashQRastreo"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SplashQRescato"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".MenuRastreo" android:screenOrientation="portrait"/>
+        <activity android:name=".MenuRescato" android:screenOrientation="portrait"/>
+
+        <activity android:name=".CamaraQR" android:screenOrientation="portrait"/>
+
+        <activity android:name=".MapsPersonalizado" />
+
+        <activity android:name=".PasswordChange" android:screenOrientation="portrait"/>
+
+        <activity android:name=".IniCreate" android:screenOrientation="portrait"/>
+        <activity android:name=".IniDelete" android:screenOrientation="portrait"/>
+        <activity android:name=".IniMod" android:screenOrientation="portrait"/>
+        <activity android:name=".IniReader" android:screenOrientation="portrait"/>
+
+        <activity android:name=".CreateFormularioVolun" android:screenOrientation="portrait"/>
+        <activity android:name=".CreateFormularioProtec" android:screenOrientation="portrait"/>
+
+        <activity android:name=".ModificaFormularioProtec" android:screenOrientation="portrait"/>
+        <activity android:name=".ModificaFormulario" android:screenOrientation="portrait"/>
+
+        <activity android:name=".DeleteUsers" android:screenOrientation="portrait"/>
+        <activity android:name=".DeleteProtec" android:screenOrientation="portrait"/>
+
+        <activity android:name=".MenuAdmin" android:screenOrientation="portrait"/>
+
+        <activity android:name=".LoginNew" android:screenOrientation="portrait"/>
+        <activity android:name=".Login" android:screenOrientation="portrait"/>
+        <activity android:name=".LoginAdmin" android:screenOrientation="portrait"/>
+
+        <activity android:name=".VisorUsers" android:screenOrientation="portrait"/>
+        <activity android:name=".VisorProtec" android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

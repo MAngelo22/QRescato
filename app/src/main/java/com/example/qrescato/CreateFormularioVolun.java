@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.qrescato.UsersTable.UserAppDbHelper;
 import com.example.qrescato.UsersTable.UsersAppContract;
 
-public class LoginNew2 extends AppCompatActivity {
+public class CreateFormularioVolun extends AppCompatActivity {
 
     Button BtnCrear;
     private UserAppDbHelper mHelper;
@@ -24,11 +24,11 @@ public class LoginNew2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_login);
-        BtnCrear = (Button) findViewById(R.id.buttonCrearNew);
+        setContentView(R.layout.activity_create);
+        BtnCrear = (Button) findViewById(R.id.BtnMod);
         final TextView textName = (TextView) findViewById(R.id.textNewName);
         final TextView textPassword = (TextView) findViewById(R.id.textNewPas);
-        final TextView textEmail = (TextView) findViewById(R.id.textNewMail);
+        final TextView textEmail = (TextView) findViewById(R.id.textNewTlfn);
 
         //Aqui hago un onclick escuchando a la funcion de vaciar
         textName.setOnClickListener(new View.OnClickListener(){
@@ -66,7 +66,7 @@ public class LoginNew2 extends AppCompatActivity {
         mHelper = new UserAppDbHelper(this);
         final TextView textoNombre = (TextView) findViewById(R.id.textNewName);
         final TextView textoPassword = (TextView) findViewById(R.id.textNewPas);
-        final TextView textEmail = (TextView) findViewById(R.id.textNewMail);
+        final TextView textEmail = (TextView) findViewById(R.id.textNewTlfn);
 
         //Instanciamos la base de datos con mHelper, y la hacemos escribible
         //Creamos un "contenedor" que almacenara los valores que usaremos
@@ -92,7 +92,8 @@ public class LoginNew2 extends AppCompatActivity {
         toastNewUsu.setView(view);
         toastNewUsu.show();
 
-
+        Intent cambioUs = new Intent(this, MenuAdmin.class);
+        startActivity(cambioUs);
     }
         //Aqui ponemos los campos vacios al doble click
     public void vaciar(TextView tv){
@@ -102,7 +103,7 @@ public class LoginNew2 extends AppCompatActivity {
 
     //La funcion de volver al menu anterior
     public void volver(View view) {
-        Intent cambioUs = new Intent(this, MenuRescato.class);
+        Intent cambioUs = new Intent(this, IniCreate.class);
         startActivity(cambioUs);
     }
 }

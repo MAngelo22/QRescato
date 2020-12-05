@@ -1,36 +1,36 @@
 package com.example.qrescato;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentActivity;
-
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
+import com.example.qrescato.UsersTable.UserAppDbHelper;
+import com.example.qrescato.UsersTable.UsersAppContract;
+import com.example.qrescato.ZonaSeguraTable.ZonaSeguraContract;
+import com.example.qrescato.ZonaSeguraTable.ZonaSeguraDbHelper;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
-public class MapsActivity extends AppCompatActivity{
+public class MapsPersonalizado extends AppCompatActivity{
 
     private GoogleMap mMap;
 
@@ -42,7 +42,7 @@ public class MapsActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.activity_maps_personalizado);
 
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -51,10 +51,10 @@ public class MapsActivity extends AppCompatActivity{
 
         client = LocationServices.getFusedLocationProviderClient(this);
 
-        if (ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(MapsPersonalizado.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             getCurrentLocation();
         } else {
-            ActivityCompat.requestPermissions(MapsActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
+            ActivityCompat.requestPermissions(MapsPersonalizado.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
         }
     }
 
@@ -78,7 +78,7 @@ public class MapsActivity extends AppCompatActivity{
                         @Override
                         public void onMapReady(GoogleMap googleMap) {
                             LatLng latlng = new LatLng(location.getLatitude(), location.getLongitude());
-                            MarkerOptions options = new MarkerOptions().position(latlng).title("Usted esta aquí");
+                            MarkerOptions options = new MarkerOptions().position(latlng).title("Nombre usuario");
 
                             //Marcadores de Protectoras
                             LatLng latlng1 = new LatLng(40.387374,-3.728961);
@@ -107,6 +107,7 @@ public class MapsActivity extends AppCompatActivity{
 
                             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,100));
                             googleMap.addMarker(options);
+                            cargarMapaZonasSeguras(googleMap);
                             googleMap.addMarker(Protectora1);
                             googleMap.addMarker(Protectora2);
                             googleMap.addMarker(Protectora3);
@@ -122,12 +123,44 @@ public class MapsActivity extends AppCompatActivity{
         });
     }
 
+    private void cargarMapaZonasSeguras(GoogleMap googleMap){
+        ZonaSeguraDbHelper mHelper = new ZonaSeguraDbHelper(this);
+
+        SQLiteDatabase db2 = mHelper.getReadableDatabase();
+        String[] args = new String[]{};
+        Cursor cursor = db2.rawQuery("Select * from zonasegura" , null);
+
+        while (cursor.moveToNext()) {
+
+            String nombreProtectora = cursor.getString(
+                    (Integer) cursor.getColumnIndex(ZonaSeguraContract.TaskEntry.NOMBRE)
+            );
+            String mailProtectora = cursor.getString(
+                    (Integer) cursor.getColumnIndex(ZonaSeguraContract.TaskEntry.CORREO)
+            );
+            Float latitudProtectora = cursor.getFloat(
+                    (Integer) cursor.getColumnIndex(ZonaSeguraContract.TaskEntry.LATITUD)
+            );
+            Float longitudProtectora = cursor.getFloat(
+                    (Integer) cursor.getColumnIndex(ZonaSeguraContract.TaskEntry.LONGITUD)
+            );
+            int telefonoProtectora = cursor.getInt(
+                    (Integer) cursor.getColumnIndex(ZonaSeguraContract.TaskEntry.TLFN)
+            );
+
+            LatLng latlng = new LatLng(latitudProtectora, longitudProtectora);
+            MarkerOptions Protectora = new MarkerOptions().position(latlng).title(nombreProtectora +" \n " + telefonoProtectora + "\n " +  mailProtectora);
+            googleMap.addMarker(Protectora);
+        }
+        cursor.close();
+        db2.close();
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if(requestCode == 44){
             if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                 getCurrentLocation();
-
             }
         }
     }

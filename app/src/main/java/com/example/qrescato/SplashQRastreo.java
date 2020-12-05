@@ -17,16 +17,12 @@ public class SplashQRastreo extends AppCompatActivity implements Animation.Anima
         setContentView(R.layout.splash_qrastreo);
 
         ImageView planeta = findViewById(R.id.imgtierragif);
-        ImageView huellas = findViewById(R.id.gifcarga);
         ImageView Q = findViewById(R.id.q);
         ImageView rr = findViewById(R.id.r);
         ImageView astreo = findViewById(R.id.astreo);
 
         Animation animation1Desvancer = AnimationUtils.loadAnimation(this,R.anim.animdesvanecer);
         Q.startAnimation(animation1Desvancer);
-
-        Animation animation2aparecerhuellas = AnimationUtils.loadAnimation(this,R.anim.animalpha);
-        huellas.startAnimation(animation2aparecerhuellas);
 
         Animation animation2aparecer = AnimationUtils.loadAnimation(this,R.anim.animalpha);
         planeta.startAnimation(animation2aparecer);

@@ -21,9 +21,9 @@
     <TextView
         android:id="@+id/textView"
         style="@style/etiquetas"
-        android:layout_width="237dp"
-        android:layout_height="40dp"
-        android:text="@string/usuario_creado"
+        android:layout_width="293dp"
+        android:layout_height="33dp"
+        android:text="@string/protectora_creada"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
