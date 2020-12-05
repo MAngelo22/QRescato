@@ -26,9 +26,9 @@ public class CreateFormularioVolun extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
         BtnCrear = (Button) findViewById(R.id.BtnMod);
-        final TextView textName = (TextView) findViewById(R.id.textNewName);
+        final TextView textName = (TextView) findViewById(R.id.nombreProtectoraModificar);
         final TextView textPassword = (TextView) findViewById(R.id.textNewPas);
-        final TextView textEmail = (TextView) findViewById(R.id.textNewTlfn);
+        final TextView textEmail = (TextView) findViewById(R.id.telefonoProtectoraModificar);
 
         //Aqui hago un onclick escuchando a la funcion de vaciar
         textName.setOnClickListener(new View.OnClickListener(){
@@ -64,9 +64,9 @@ public class CreateFormularioVolun extends AppCompatActivity {
 
     public void Crear() {
         mHelper = new UserAppDbHelper(this);
-        final TextView textoNombre = (TextView) findViewById(R.id.textNewName);
+        final TextView textoNombre = (TextView) findViewById(R.id.nombreProtectoraModificar);
         final TextView textoPassword = (TextView) findViewById(R.id.textNewPas);
-        final TextView textEmail = (TextView) findViewById(R.id.textNewTlfn);
+        final TextView textEmail = (TextView) findViewById(R.id.telefonoProtectoraModificar);
 
         //Instanciamos la base de datos con mHelper, y la hacemos escribible
         //Creamos un "contenedor" que almacenara los valores que usaremos

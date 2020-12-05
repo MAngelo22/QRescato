@@ -5,7 +5,7 @@ import android.provider.BaseColumns;
 public class VoluntariosContract {
 
     public static final String DB_NAME = "com.example.qrescato.qrastreo";
-    public static final int DB_VERSION = 4;
+    public static final int DB_VERSION = 5;
 
     public class TaskEntry implements BaseColumns {
         public static final String TABLE = "voluntarios";

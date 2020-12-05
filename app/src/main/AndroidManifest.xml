@@ -65,8 +65,6 @@
         <activity android:name=".PasswordChange" android:screenOrientation="portrait"/>
 
         <activity android:name=".IniCreate" android:screenOrientation="portrait"/>
-        <activity android:name=".IniDelete" android:screenOrientation="portrait"/>
-        <activity android:name=".IniMod" android:screenOrientation="portrait"/>
         <activity android:name=".IniReader" android:screenOrientation="portrait"/>
 
         <activity android:name=".CreateFormularioVolun" android:screenOrientation="portrait"/>
@@ -74,9 +72,6 @@
 
         <activity android:name=".ModificaFormularioProtec" android:screenOrientation="portrait"/>
         <activity android:name=".ModificaFormulario" android:screenOrientation="portrait"/>
-
-        <activity android:name=".DeleteUsers" android:screenOrientation="portrait"/>
-        <activity android:name=".DeleteProtec" android:screenOrientation="portrait"/>
 
         <activity android:name=".MenuAdmin" android:screenOrientation="portrait"/>
 

@@ -77,11 +77,12 @@ public class MapsPersonalizado extends AppCompatActivity{
                     mapFragment.getMapAsync(new OnMapReadyCallback() {
                         @Override
                         public void onMapReady(GoogleMap googleMap) {
+
                             LatLng latlng = new LatLng(location.getLatitude(), location.getLongitude());
                             MarkerOptions options = new MarkerOptions().position(latlng).title("Nombre usuario");
 
                             //Marcadores de Protectoras
-                            LatLng latlng1 = new LatLng(40.387374,-3.728961);
+                           /* LatLng latlng1 = new LatLng(40.387374,-3.728961);
                             MarkerOptions Protectora1 = new MarkerOptions().position(latlng1).title("Zarpas y Colmillos \n 648171717\n contacto@zarpasycolmillos.es");
                             LatLng latlng2 = new LatLng(40.3810592,-3.7326006);
                             MarkerOptions Protectora2 = new MarkerOptions().position(latlng2).title("PROA \n 91 547 19 92");
@@ -92,31 +93,17 @@ public class MapsPersonalizado extends AppCompatActivity{
                             LatLng latlng5 = new LatLng(40.642523,-3.174118);
                             MarkerOptions Protectora5 = new MarkerOptions().position(latlng5).title("La camada\n 666 777 51 41\n lacamadaguada@hotmail.com");
                             LatLng latlng6 = new LatLng(40.540471,-3.397807);
-                            MarkerOptions Protectora6 = new MarkerOptions().position(latlng6).title("ALBA\n 609 29 19 30\n");
-
-
-                            /*
-                            for (objeto: marcadores
-                                 ) {
-                                LatLng sydney = new LatLng(objeto.latitud, objeto.longitud);
-                                googleMap.addMarker(new MarkerOptions().position(sydney)
-                                        .title(objeto.nombreMascota));
-                            }
-                            */
-
+                            MarkerOptions Protectora6 = new MarkerOptions().position(latlng6).title("ALBA\n 609 29 19 30\n");*/
 
                             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,100));
                             googleMap.addMarker(options);
                             cargarMapaZonasSeguras(googleMap);
-                            googleMap.addMarker(Protectora1);
+                            /*googleMap.addMarker(Protectora1);
                             googleMap.addMarker(Protectora2);
                             googleMap.addMarker(Protectora3);
                             googleMap.addMarker(Protectora4);
                             googleMap.addMarker(Protectora5);
-                            googleMap.addMarker(Protectora6);
-                            //METODO REST PARA ALMACENAR UNOS DATOS QUE SERAN
-                            // latitud = location.getLatitude() y longitud = location.getLongitude()
-                        }
+                            googleMap.addMarker(Protectora6);*/                       }
                     });
                 }
             }

@@ -60,13 +60,6 @@ public class MapsActivity extends AppCompatActivity{
 
     private void getCurrentLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return;
         }
         Task<Location> task = client.getLastLocation();
@@ -94,17 +87,6 @@ public class MapsActivity extends AppCompatActivity{
                             LatLng latlng6 = new LatLng(40.540471,-3.397807);
                             MarkerOptions Protectora6 = new MarkerOptions().position(latlng6).title("ALBA\n 609 29 19 30\n");
 
-
-                            /*
-                            for (objeto: marcadores
-                                 ) {
-                                LatLng sydney = new LatLng(objeto.latitud, objeto.longitud);
-                                googleMap.addMarker(new MarkerOptions().position(sydney)
-                                        .title(objeto.nombreMascota));
-                            }
-                            */
-
-
                             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latlng,100));
                             googleMap.addMarker(options);
                             googleMap.addMarker(Protectora1);
@@ -113,8 +95,7 @@ public class MapsActivity extends AppCompatActivity{
                             googleMap.addMarker(Protectora4);
                             googleMap.addMarker(Protectora5);
                             googleMap.addMarker(Protectora6);
-                            //METODO REST PARA ALMACENAR UNOS DATOS QUE SERAN
-                            // latitud = location.getLatitude() y longitud = location.getLongitude()
+
                         }
                     });
                 }

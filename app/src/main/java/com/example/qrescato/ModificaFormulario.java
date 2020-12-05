@@ -1,13 +1,6 @@
 package com.example.qrescato;
 
-import android.Manifest;
-import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.sqlite.SQLiteDatabase;
-import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -21,13 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.qrescato.UsersTable.UserAppDbHelper;
-import com.example.qrescato.UsersTable.UsersAppContract;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
 
 public class ModificaFormulario extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback{
 
@@ -43,8 +29,8 @@ public class ModificaFormulario extends AppCompatActivity implements ActivityCom
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modificar);
-        coorX = (TextView) findViewById(R.id.textCoordX);
-        coorY = (TextView) findViewById(R.id.textCoordY);
+        coorX = (TextView) findViewById(R.id.longProtectoraModifcar);
+        coorY = (TextView) findViewById(R.id.latProtectoraModificar);
     }
 
 public void Modificar(){
@@ -59,7 +45,7 @@ public void Modificar(){
 
     //La funcion de volver al menu anterior
     public void volver(View view) {
-        Intent cambioUs = new Intent(this, IniMod.class);
+        Intent cambioUs = new Intent(this, MenuAdmin.class);
         startActivity(cambioUs);
     }
     public void Generar(View view) {

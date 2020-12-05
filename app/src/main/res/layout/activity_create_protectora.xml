@@ -8,13 +8,13 @@
     android:background="@drawable/fondo2">
 
     <Button
-        android:id="@+id/BtnModProtec"
+        android:id="@+id/BtnCrearProtectora"
         style="@style/etiquetas"
         android:layout_width="186dp"
         android:layout_height="68dp"
         android:layout_alignParentEnd="true"
         android:background="@drawable/btnoscuro2"
-        android:onClick="Crear"
+        android:onClick="crearProtectora"
         android:text="@string/crear_protectora"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,10 +23,10 @@
         app:layout_constraintStart_toEndOf="@+id/BtnMod"
         app:layout_constraintTop_toTopOf="@+id/BtnMod"
         app:layout_constraintVertical_bias="0.015"
-        tools:ignore="MissingConstraints, OnClick" />
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textCoordY"
+        android:id="@+id/latProtectoraModificar"
         style="@style/etiquetas2"
         android:layout_width="202dp"
         android:layout_height="64dp"
@@ -37,12 +37,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNewMail2"
+        app:layout_constraintTop_toBottomOf="@+id/mailProtectoraModificar"
         app:layout_constraintVertical_bias="0.166"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textCoordX"
+        android:id="@+id/longProtectoraModifcar"
         style="@style/etiquetas2"
         android:layout_width="202dp"
         android:layout_height="64dp"
@@ -53,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNewMail2"
+        app:layout_constraintTop_toBottomOf="@+id/mailProtectoraModificar"
         app:layout_constraintVertical_bias="0.171"
         tools:ignore="MissingConstraints" />
 
@@ -71,12 +71,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNewMail2"
+        app:layout_constraintTop_toBottomOf="@+id/mailProtectoraModificar"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textNewMail2"
+        android:id="@+id/mailProtectoraModificar"
         style="@style/etiquetas2"
         android:layout_width="341dp"
         android:layout_height="57dp"
@@ -104,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNewTlfn"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoProtectoraModificar"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
@@ -124,7 +124,7 @@
         app:layout_constraintVertical_bias="0.977" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textNewName"
+        android:id="@+id/nombreProtectoraModificar"
         style="@style/etiquetas2"
         android:layout_width="350dp"
         android:layout_height="52dp"
@@ -170,12 +170,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNewName"
+        app:layout_constraintTop_toBottomOf="@+id/nombreProtectoraModificar"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textNewTlfn"
+        android:id="@+id/telefonoProtectoraModificar"
         style="@style/etiquetas2"
         android:layout_width="361dp"
         android:layout_height="54dp"
@@ -203,7 +203,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNewMail2"
+        app:layout_constraintTop_toBottomOf="@+id/mailProtectoraModificar"
         app:layout_constraintVertical_bias="0.58"
         tools:ignore="MissingConstraints,OnClick" />
 

@@ -19,16 +19,6 @@ public class MenuAdmin extends AppCompatActivity{
         startActivity(cambioUs);
     }
 
-    public void Delete(View view) {
-        Intent cambioUs2 = new Intent(this, IniDelete.class);
-        startActivity(cambioUs2);
-    }
-
-    public void Update(View view) {
-        Intent cambioUs3 = new Intent(this, IniMod.class);
-        startActivity(cambioUs3);
-    }
-
     public void Reader(View view) {
         Intent cambioUs4 = new Intent(this, IniReader.class);
         startActivity(cambioUs4);

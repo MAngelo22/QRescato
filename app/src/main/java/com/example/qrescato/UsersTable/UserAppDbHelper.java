@@ -22,7 +22,8 @@ public class UserAppDbHelper extends SQLiteOpenHelper{
                     UsersAppContract.TaskEntry.CORREO  + " TEXT NOT NULL);";
 
             String createTableZonaSegura = "CREATE TABLE IF NOT EXISTS " + ZonaSeguraContract.TaskEntry.TABLE + " ( " +
-                    ZonaSeguraContract.TaskEntry.NOMBRE + " TEXT NOT NULL PRIMARY KEY, "+
+                    ZonaSeguraContract.TaskEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    ZonaSeguraContract.TaskEntry.NOMBRE + " TEXT NOT NULL, "+
                     ZonaSeguraContract.TaskEntry.CORREO + " TEXT NOT NULL, "+
                     ZonaSeguraContract.TaskEntry.LONGITUD + " FLOAT NOT NULL, "+
                     ZonaSeguraContract.TaskEntry.LATITUD + " FLOAT NOT NULL, "+
@@ -36,10 +37,19 @@ public class UserAppDbHelper extends SQLiteOpenHelper{
                     VoluntariosContract.TaskEntry.LONGITUD + " FLOAT NOT NULL , " +
                     VoluntariosContract.TaskEntry.LATITUD + " FLOAT NOT NULL);";
 
+            String createZonasSeguras = "INSERT INTO " + ZonaSeguraContract.TaskEntry.TABLE + " (Nombre, Correo, TelefonoZS, LongZS, LatZS) " +
+                    "VALUES ('Zarpas y Colmillos','contacto@zarpasycolmillos.es', 648171717,-3.728961, 40.387374)," +
+                    "('PROA', 'proa@noseque.com', 915471992, -3.7326006, 40.3810592),"+
+                    "('Sociedad Protectora de Animales y Plantas de Madrid', 'proa@noseque.com', 913119133, -3.717193, 40.464177),"+
+                    "('ANAA Protectora de animales', 'anaa@anaaweb.org', 916672036, -3.4748668, 40.674798),"+
+                    "('La camada', 'lacamadaguada@hotmail.com', 6667775141, -3.174118, 40.642523),"+
+                    "('ALBA', 'proa@noseque.com', 609291930, -3.397807, 40.540471)";
+
 
             db.execSQL(createTableZonaSegura);
             db.execSQL(createTable);
             db.execSQL(createTableVoluntarios);
+            db.execSQL(createZonasSeguras);
         }
 
         @Override
