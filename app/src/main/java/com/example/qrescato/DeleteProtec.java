@@ -2,7 +2,6 @@ package com.example.qrescato;
 
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -15,8 +14,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.qrescato.UsersTable.UserAppDbHelper;
-import com.example.qrescato.UsersTable.UsersAppContract;
 import com.example.qrescato.ZonaSeguraTable.ZonaSeguraContract;
 import com.example.qrescato.ZonaSeguraTable.ZonaSeguraDbHelper;
 import com.google.android.material.textfield.TextInputEditText;
@@ -30,42 +27,14 @@ public class DeleteProtec extends AppCompatActivity implements Animation.Animati
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
 
-        BtnBorrar = (Button) findViewById(R.id.BtnDel);
-        final TextView textName = (TextView) findViewById(R.id.textNewName);
-        final TextView textTelefono = (TextView) findViewById(R.id.textNewTlfn);
-        final TextView textEmail = (TextView) findViewById(R.id.textNewMail2);
-        final TextView textLat = (TextView) findViewById(R.id.textCoordY);
-        final TextView textLong = (TextView) findViewById(R.id.textCoordX);
+        BtnBorrar = (Button) findViewById(R.id.btnBorrarProtectora);
+        final TextView textName = (TextView) findViewById(R.id.listadoProtectora);
 
         //Aqui hago un onclick escuchando a la funcion de vaciar
         textName.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View vista){
                 vaciar(textName);
-            }
-        });
-        textTelefono.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View vista){
-                vaciar(textTelefono);
-            }
-        });
-        textEmail.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View vista){
-                vaciar(textEmail);
-            }
-        });
-        textLong.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View vista){
-                vaciar(textLong);
-            }
-        });
-        textLat.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View vista){
-                vaciar(textLat);
             }
         });
 

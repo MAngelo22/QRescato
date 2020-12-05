@@ -44,7 +44,7 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textName2"
+        android:id="@+id/listadoProtectora"
         style="@style/etiquetas2"
         android:layout_width="333dp"
         android:layout_height="74dp"
@@ -87,11 +87,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAtras"
+        app:layout_constraintTop_toBottomOf="@+id/btnBorrarProtectora"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnAtras"
+        android:id="@+id/btnBorrarProtectora"
         style="@style/etiquetas"
         android:layout_width="176dp"
         android:layout_height="69dp"
@@ -104,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textName2"
+        app:layout_constraintTop_toBottomOf="@+id/listadoProtectora"
         app:layout_constraintVertical_bias="0.345"
         tools:ignore="MissingConstraints" />
 

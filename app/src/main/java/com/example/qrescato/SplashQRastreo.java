@@ -16,24 +16,29 @@ public class SplashQRastreo extends AppCompatActivity implements Animation.Anima
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_qrastreo);
 
-        ImageView planeta = findViewById(R.id.imgtierragif);
+        Integer yourValue = 150;
+
+        ImageView qrr = findViewById(R.id.qr);
+        ImageView tierra = findViewById(R.id.lupa);
         ImageView Q = findViewById(R.id.q);
         ImageView rr = findViewById(R.id.r);
         ImageView astreo = findViewById(R.id.astreo);
+        ImageView imageView= findViewById(R.id.fondodib);
 
         Animation animation1Desvancer = AnimationUtils.loadAnimation(this,R.anim.animdesvanecer);
         Q.startAnimation(animation1Desvancer);
 
-        Animation animation2aparecer = AnimationUtils.loadAnimation(this,R.anim.animalpha);
-        planeta.startAnimation(animation2aparecer);
+
 
         Animation animationR = AnimationUtils.loadAnimation(this,R.anim.animalpha);
         rr.startAnimation(animationR);
-
-        Animation animationAstreo = AnimationUtils.loadAnimation(this,R.anim.animalpha);
-        astreo.startAnimation(animationAstreo);
+        tierra.startAnimation(animationR);
+        qrr.startAnimation(animationR);
+        astreo.startAnimation(animationR);
 
         animationR.setAnimationListener(this);
+
+        imageView.setAlpha(yourValue); //  some value 0-255 where 0 is fully transparent and 255 is fully opaque
 
     }
 
