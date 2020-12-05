@@ -54,4 +54,21 @@
         app:layout_constraintTop_toBottomOf="@+id/texto"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/Enlace"
+        style="@style/etiquetas2"
+        android:layout_width="123dp"
+        android:layout_height="48dp"
+        android:background="@drawable/papel"
+        android:textSize="20sp"
+        android:onClick="URL"
+        android:text="@string/generar_qr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintVertical_bias="0.884"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

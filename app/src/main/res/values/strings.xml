@@ -65,4 +65,6 @@
     <string name="se_ha_eliminado_correctamente">Se ha eliminado correctamente</string>
     <string name="protectora_creada">Protectora Creada</string>
     <string name="listo">Listo</string>
+    <string name="button">Button</string>
+    <string name="generar_qr">Generar QR</string>
 </resources>

@@ -38,7 +38,7 @@ public class SplashQRastreo extends AppCompatActivity implements Animation.Anima
 
         animationR.setAnimationListener(this);
 
-        //imageView.setAlpha(yourValue); //  some value 0-255 where 0 is fully transparent and 255 is fully opaque
+        imageView.setAlpha(yourValue); //  some value 0-255 where 0 is fully transparent and 255 is fully opaque
 
     }
 

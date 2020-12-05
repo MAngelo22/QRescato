@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,7 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class CamaraQR extends AppCompatActivity {
 
-    private Button btnScanner;
+    private Button btnScanner,BtnLink;
     private TextView tvBArCode;
 
     @Override
@@ -23,6 +24,7 @@ public class CamaraQR extends AppCompatActivity {
 
         btnScanner = findViewById(R.id.button);
         tvBArCode = findViewById(R.id.texto);
+        BtnLink = findViewById(R.id.Enlace);
 
         btnScanner.setOnClickListener(mOnClickListener);
     }
@@ -53,6 +55,16 @@ public class CamaraQR extends AppCompatActivity {
                 }
             }
         };
+    }
+
+    String url = "https://www.codigos-qr.com/generador-de-codigos-qr/";
+
+    public void URL(View v) {
+
+        Uri uri = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+
     }
 
 }
