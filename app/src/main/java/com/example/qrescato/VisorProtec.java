@@ -45,7 +45,7 @@ public class VisorProtec extends AppCompatActivity{
 
         if (zDbHelper == null) {
             zDbHelper = new ArrayAdapter<>(this,
-                    R.layout.VISTA_GENERAL_LISTADO,
+                    R.layout.VISTA_GENERAL_LISTAD,
                     R.id.REPEAT_DE_LAS_PROTECTORAS,
                     taskList);
             listadoProtectoras.setAdapter(adapter);
