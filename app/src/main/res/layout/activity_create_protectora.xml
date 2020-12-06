@@ -198,7 +198,7 @@
         android:layout_height="70dp"
         android:layout_alignParentEnd="true"
         android:background="@drawable/btnoscuro2"
-        android:onClick="Crear"
+        android:onClick="generarCoord"
         android:text="@string/generar_coordenadas"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
