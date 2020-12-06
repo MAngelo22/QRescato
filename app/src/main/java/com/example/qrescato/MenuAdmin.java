@@ -25,6 +25,12 @@ public class MenuAdmin extends AppCompatActivity{
     }
 
     //La funcion de volver al menu anterior
+    public void verMapa(View view) {
+        Intent cambioUs2 = new Intent(this, MapsPersonalizado.class);
+        startActivity(cambioUs2);
+    }
+
+    //La funcion de volver al menu anterior
     public void volver(View view) {
         Intent cambioUs5 = new Intent(this, MenuRescato.class);
         startActivity(cambioUs5);

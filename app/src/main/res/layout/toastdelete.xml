@@ -21,8 +21,8 @@
     <TextView
         android:id="@+id/textView"
         style="@style/etiquetas"
-        android:layout_width="239dp"
-        android:layout_height="64dp"
+        android:layout_width="246dp"
+        android:layout_height="96dp"
         android:text="@string/se_ha_eliminado_correctamente"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

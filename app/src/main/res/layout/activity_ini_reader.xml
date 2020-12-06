@@ -45,7 +45,6 @@
         android:layout_width="324dp"
         android:layout_height="97dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="212dp"
         android:background="@drawable/btnclaro"
         android:onClick="ReadVol"
         android:text="@string/voluntario"
@@ -53,11 +52,11 @@
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintEnd_toEndOf="@+id/BtnProt"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BtnProt"
-        app:layout_constraintVertical_bias="0.64"
+        app:layout_constraintVertical_bias="0.214"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -77,7 +76,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Aviso"
-        app:layout_constraintVertical_bias="0.078"
+        app:layout_constraintVertical_bias="0.119"
         tools:ignore="MissingConstraints" />
 
     <Button
